@@ -22,6 +22,8 @@ def query_records():
 
     print(name)
 
+# Check if the user send  a name at all
+
     with open('/tmp/data.txt', 'r') as f:
         data = f.read()
         records = json.loads(data)
@@ -89,6 +91,7 @@ def delete_record():
     return jsonify(record)
 
 app.run(debug = True)
+
 
 
 
